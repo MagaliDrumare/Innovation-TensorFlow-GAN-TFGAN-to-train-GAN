@@ -115,7 +115,7 @@ for gan_loss, name in [(vanilla_gan_loss, 'vanilla loss'),
                        (custom_gan_loss, 'custom loss')]:
     evaluate_tfgan_loss(gan_loss, name)
 ```
-# Step 4 : Training with tfgan.gan_train_ops
+# Step 4 : Optimizer tfgan.gan_train_ops
 ```python
 generator_optimizer = tf.train.AdamOptimizer(0.001, beta1=0.5)
 discriminator_optimizer = tf.train.AdamOptimizer(0.0001, beta1=0.5)
