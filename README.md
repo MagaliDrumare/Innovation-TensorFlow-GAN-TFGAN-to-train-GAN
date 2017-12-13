@@ -138,7 +138,7 @@ with tf.variable_scope('Generator', reuse=True):
         tf.random_normal([num_images_to_eval, noise_dims]))
 eval_score = util.mnist_score(eval_images, MNIST_CLASSIFIER_FROZEN_GRAPH)
 ```
-# Final Step : Train the GAN with tfgan.get_sequential_train_steps
+# Final Step : Training with tfgan.get_sequential_train_steps
 ```python 
 # We have the option to train the discriminator more than one step for every 
 # step of the generator. In order to do this, we use a `GANTrainSteps` with 
