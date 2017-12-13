@@ -4,7 +4,7 @@
 ### GAN For Beginners 
 * https://www.oreilly.com/learning/generative-adversarial-networks-for-beginners
 
-### TFGAN is a new library for training and evaluating Generative Adversarial Networks (GANs)-december 2017
+### TFGAN is a new library for training and evaluating Generative Adversarial Networks (GANs)
 * TFGAN, a lightweight Library for Generative Adversarial Networks: http://bit.ly/2z6yda3
 * On GitHub:  https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/gan/README.md
 
