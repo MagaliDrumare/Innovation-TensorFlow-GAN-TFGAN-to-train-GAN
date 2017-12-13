@@ -1,6 +1,7 @@
 
 ### TFGAN is a lightweight library for training and evaluating Generative Adversarial Networks (GANs)
-* https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/gan/README.md
+* TFGAN: A Lightweight Library for Generative Adversarial Networks: http://bit.ly/2z6yda3
+* On GitHub:  https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/gan/README.md
 
 ### GAN For Beginners 
 * https://www.oreilly.com/learning/generative-adversarial-networks-for-beginners
