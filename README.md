@@ -125,8 +125,10 @@ gan_train_ops = tfgan.gan_train_ops(
     gan_model,
     improved_wgan_loss,
     generator_optimizer,
-    discriminator_optimizer)
-    ```
+    discriminator_optimizer)
+```
+
+
 # Step 5 : Evaluation of the model with the method generator_fn
 ```python 
 num_images_to_eval = 500
