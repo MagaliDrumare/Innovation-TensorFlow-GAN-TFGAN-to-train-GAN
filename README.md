@@ -117,7 +117,7 @@ for gan_loss, name in [(vanilla_gan_loss, 'vanilla loss'),
                        (custom_gan_loss, 'custom loss')]:
     evaluate_tfgan_loss(gan_loss, name)
 ```
-# Step 4 : Optimizer tfgan.gan_train_ops
+# Step 4 : Optimizer with tfgan.gan_train_ops
 ```python
 generator_optimizer = tf.train.AdamOptimizer(0.001, beta1=0.5)
 discriminator_optimizer = tf.train.AdamOptimizer(0.0001, beta1=0.5)
@@ -129,7 +129,7 @@ gan_train_ops = tfgan.gan_train_ops(
 ```
 
 
-# Step 5 : Evaluation of the model with the method generator_fn
+# Step 5 : Evaluation with the method generator_fn
 ```python 
 num_images_to_eval = 500
 MNIST_CLASSIFIER_FROZEN_GRAPH = './mnist/data/classify_mnist_graph_def.pb'
