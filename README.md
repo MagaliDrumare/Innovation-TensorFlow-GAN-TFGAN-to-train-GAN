@@ -1,5 +1,5 @@
 
-# What is Tensorflow GAN ? 
+# What is Tensorflow GAN (TFGAN) ? 
 
 ### GAN For Beginners 
 * https://www.oreilly.com/learning/generative-adversarial-networks-for-beginners
