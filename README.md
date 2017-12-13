@@ -12,7 +12,7 @@
 
 # Step 1 : Create the Generator and the Discriminator 
 ```python 
-//Create the generator 
+// Create the generator 
 def generator_fn(noise, weight_decay=2.5e-5):
     """Simple generator to produce MNIST images.
     
