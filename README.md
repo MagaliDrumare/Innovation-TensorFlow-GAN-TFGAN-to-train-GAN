@@ -66,7 +66,6 @@ def discriminator_fn(img, unused_conditioning, weight_decay=2.5e-5):
         net = layers.fully_connected(net, 1024, normalizer_fn=layers.batch_norm)
         return layers.linear(net, 1)
 ```
-  
 ## Step 2 : Create the GAN MODEL with tfgan.gan_model      
 ```python 
 noise_dims = 64
