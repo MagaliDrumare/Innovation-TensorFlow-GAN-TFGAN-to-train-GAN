@@ -12,7 +12,7 @@
 * Need to update Tensorflow to the last version 1.4.1 : pip install --upgrade tensorflow 
 * https://github.com/tensorflow/models/blob/master/research/gan/tutorial.ipynb
 
-# Step 1 : Create the Generator and the Discriminator 
+## Step 1 : Create the Generator and the Discriminator 
 ```python 
 // Create the generator 
 def generator_fn(noise, weight_decay=2.5e-5):
@@ -67,7 +67,7 @@ def discriminator_fn(img, unused_conditioning, weight_decay=2.5e-5):
         return layers.linear(net, 1)
 ```
   
-# Step 2 : Create the GAN MODEL with tfgan.gan_model      
+## Step 2 : Create the GAN MODEL with tfgan.gan_model      
 ```python 
 noise_dims = 64
 gan_model = tfgan.gan_model(
@@ -81,7 +81,7 @@ generated_data_to_visualize = tfgan.eval.image_reshaper(
 gan_model.generated_data[:20,...], num_cols=10)
 visualize_digits(generated_data_to_visualize)  
 ```
-# Step 3 : Loss Function with tfgan.gan_loss
+## Step 3 : Loss Function with tfgan.gan_loss
 ```python 
 # We can use the minimax loss from the original paper.
 vanilla_gan_loss = tfgan.gan_loss(
@@ -117,7 +117,7 @@ for gan_loss, name in [(vanilla_gan_loss, 'vanilla loss'),
                        (custom_gan_loss, 'custom loss')]:
     evaluate_tfgan_loss(gan_loss, name)
 ```
-# Step 4 : Optimizer with tfgan.gan_train_ops
+## Step 4 : Optimizer with tfgan.gan_train_ops
 ```python
 generator_optimizer = tf.train.AdamOptimizer(0.001, beta1=0.5)
 discriminator_optimizer = tf.train.AdamOptimizer(0.0001, beta1=0.5)
@@ -129,7 +129,7 @@ gan_train_ops = tfgan.gan_train_ops(
 ```
 
 
-# Step 5 : Evaluation with the method generator_fn
+## Step 5 : Evaluation with the method generator_fn
 ```python 
 num_images_to_eval = 500
 MNIST_CLASSIFIER_FROZEN_GRAPH = './mnist/data/classify_mnist_graph_def.pb'
@@ -140,7 +140,7 @@ with tf.variable_scope('Generator', reuse=True):
         tf.random_normal([num_images_to_eval, noise_dims]))
 eval_score = util.mnist_score(eval_images, MNIST_CLASSIFIER_FROZEN_GRAPH)
 ```
-# Final Step : Training with tfgan.get_sequential_train_steps
+## Final Step : Training with tfgan.get_sequential_train_steps
 ```python 
 # We have the option to train the discriminator more than one step for every 
 # step of the generator. In order to do this, we use a `GANTrainSteps` with 
